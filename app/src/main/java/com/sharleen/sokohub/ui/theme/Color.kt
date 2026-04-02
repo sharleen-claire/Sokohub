@@ -1,4 +1,4 @@
-package com.sharleen.sokohub.ui.theme
+package com.clementvexegon.sokohub.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

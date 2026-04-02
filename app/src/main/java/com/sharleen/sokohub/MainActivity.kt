@@ -1,4 +1,4 @@
-package com.sharleen.sokohub
+package com.clementvexegon.sokohub
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -11,7 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.sharleen.sokohub.ui.theme.SokohubTheme
+import com.clementvexegon.sokohub.ui.theme.SokohubTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

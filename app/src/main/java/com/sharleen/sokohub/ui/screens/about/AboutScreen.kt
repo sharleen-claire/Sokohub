@@ -1,4 +1,4 @@
-package com.sharleen.sokohub.ui.screens.about
+package com.clementvexegon.sokohub.ui.screens.about
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize

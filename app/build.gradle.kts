@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.sharleen.sokohub"
+    namespace = "com.clementvexegon.sokohub"
     compileSdk {
         version = release(36) {
             minorApiLevel = 1
@@ -12,7 +12,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.sharleen.sokohub"
+        applicationId = "com.clementvexegon.sokohub"
         minSdk = 21
         targetSdk = 36
         versionCode = 1

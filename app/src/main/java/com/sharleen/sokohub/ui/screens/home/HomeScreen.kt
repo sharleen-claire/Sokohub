@@ -45,6 +45,7 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.clementvexegon.sokohub.R
 import com.clementvexegon.sokohub.ui.theme.Blueberry
+import com.sharleen.sokohub.navigation.ROUT_INTENT
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -123,7 +124,7 @@ fun HomeScreen(navController: NavController) {
                     modifier = Modifier.padding(top = 8.dp),
                     )
                 Button(
-                    onClick = {},
+                    onClick = {  navController.navigate(ROUT_INTENT)},
                     colors = ButtonDefaults.buttonColors(Blueberry),
                     shape = RoundedCornerShape(10.dp),
                     modifier = Modifier.width(150.dp)

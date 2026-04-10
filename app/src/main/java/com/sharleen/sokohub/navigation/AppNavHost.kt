@@ -13,6 +13,7 @@ import com.clementvexegon.sokohub.ui.screens.payment.PaymentScreen
 import com.clementvexegon.sokohub.ui.screens.service.ServiceScreen
 import com.sharleen.sokohub.ui.screens.auth.LoginScreen
 import com.sharleen.sokohub.ui.screens.auth.RegisterScreen
+import com.sharleen.sokohub.ui.screens.intent.IntentScreen
 
 
 @Composable
@@ -53,6 +54,12 @@ fun AppNavHost(
         composable(ROUT_PAYMENT) {
             PaymentScreen(navController)
         }
+
+        composable(ROUT_INTENT) {
+            IntentScreen(navController)
+        }
+
+
 
 
 

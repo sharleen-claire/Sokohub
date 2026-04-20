@@ -14,6 +14,8 @@ import com.clementvexegon.sokohub.ui.screens.service.ServiceScreen
 import com.sharleen.sokohub.ui.screens.auth.LoginScreen
 import com.sharleen.sokohub.ui.screens.auth.RegisterScreen
 import com.sharleen.sokohub.ui.screens.intent.IntentScreen
+import com.sharleen.sokohub.ui.screens.scaffold.ScaffoldScreen
+import com.sharleen.sokohub.ui.screens.splash.SplashScreen
 
 
 @Composable
@@ -58,6 +60,17 @@ fun AppNavHost(
         composable(ROUT_INTENT) {
             IntentScreen(navController)
         }
+
+        composable(ROUT_SPLASH) {
+            SplashScreen(navController)
+        }
+
+        composable(ROUT_SCAFFOLD) {
+            ScaffoldScreen(navController)
+        }
+
+
+
 
 
 

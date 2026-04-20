@@ -1,7 +1,9 @@
 package com.sharleen.sokohub.ui.screens.intent
 
 import android.content.Intent
+import android.os.Build
 import android.provider.MediaStore
+import androidx.annotation.RequiresApi
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -33,8 +35,10 @@ import androidx.core.net.toUri
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.clementvexegon.sokohub.ui.theme.Blueberry
+import com.sharleen.sokohub.navigation.ROUT_ABOUT
 import com.sharleen.sokohub.navigation.ROUT_HOME
 
+@RequiresApi(Build.VERSION_CODES.CUPCAKE)
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun IntentScreen(navController: NavController){
@@ -56,7 +60,7 @@ fun IntentScreen(navController: NavController){
                 IconButton(onClick = {}) {
                     Icon(imageVector = Icons.Default.ShoppingCart, contentDescription = "Cart")
                 }
-                IconButton(onClick = {}) {
+                IconButton(onClick = {navController.navigate(ROUT_ABOUT)}) {
                     Icon(imageVector = Icons.Default.Notifications, contentDescription = "Notifications")
                 }
             },

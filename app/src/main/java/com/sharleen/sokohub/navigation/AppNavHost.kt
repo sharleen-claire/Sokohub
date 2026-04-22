@@ -3,9 +3,11 @@ package com.sharleen.sokohub.navigation
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
 import com.clementvexegon.sokohub.ui.screens.about.AboutScreen
 import com.clementvexegon.sokohub.ui.screens.home.HomeScreen
 import com.clementvexegon.sokohub.ui.screens.onboarding.OnboardingScreen
@@ -14,6 +16,8 @@ import com.clementvexegon.sokohub.ui.screens.service.ServiceScreen
 import com.sharleen.sokohub.ui.screens.auth.LoginScreen
 import com.sharleen.sokohub.ui.screens.auth.RegisterScreen
 import com.sharleen.sokohub.ui.screens.intent.IntentScreen
+import com.sharleen.sokohub.ui.screens.products.AddProductScreen
+import com.sharleen.sokohub.ui.screens.products.ViewProductScreen
 import com.sharleen.sokohub.ui.screens.scaffold.ScaffoldScreen
 import com.sharleen.sokohub.ui.screens.splash.SplashScreen
 
@@ -69,6 +73,19 @@ fun AppNavHost(
             ScaffoldScreen(navController)
         }
 
+        composable(ROUTE_ADD_PRODUCT) { AddProductScreen(navController) }
+
+        composable(ROUTE_VIEW_PRODUCTS) { ViewProductScreen(navController) }
+
+        composable(
+            ROUTE_UPDATE_PRODUCT,
+            arguments = listOf(navArgument("productId") { type = NavType.StringType })
+        ) { backStackEntry ->
+            val productId = backStackEntry.arguments?.getString("productId")!!
+            UpdateProductScreen(navController, productId)
+        }
+
+
 
 
 
@@ -81,4 +98,9 @@ fun AppNavHost(
 
 
     }
+}
+
+@Composable
+fun UpdateProductScreen(x0: NavHostController, x1: String) {
+    TODO("Not yet implemented")
 }
